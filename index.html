@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarWars</title>
+    <!-- ---------------------------------------------------------------------- -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/navbar_active.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- ---------------------------------------------------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN 추가 -->
+
+
+</head>
+
+<body>
+
+ <!--
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="videos/black_home.mp4" type="video/mp4">
+    </video>
+-->
+    
+    <img src="images/background/long_time.jpg" alt="Loading Background" class="loading-background">
+
+
+    <!-- 배경 이미지 슬라이드 -->
+    <div class="background-slider">
+        <img src="images/background/starwars.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars1.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars2.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars3.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars4.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars5.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars6.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars7.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars8.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars9.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars10.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars11.jpg" alt="Actual Background Image" class="background-slide">
+        <img src="images/background/starwars12.jpg" alt="Actual Background Image" class="background-slide">
+    <!-- 더 많은 배경 이미지를 추가할 수 있습니다 -->
+    </div>
+
+    <audio autoplay loop>
+        <source src="audio/starwars.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+
+    <!-- ---------------------------------------------------------------------- -->
+    <nav class="navbar"> 
+        
+        <div class="logo-wrapper">
+            
+            <a href="#home" class="logo-link">
+                <img src="images/logo/main_logo.jpg" alt="Logo">
+            </a>
+    
+            <a href="https://store.steampowered.com/app/32440/LEGO_Star_Wars__The_Complete_Saga/" target="_blank" aria-label="Lego Starwars"  class="sub-logo">
+                <img src="images/logo/sub_logo.png" alt="Sub Logo">
+            </a>    
+          
+        </div>
+      
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <img src="images/Button/r2.jpg" alt="Menu Toggle">
+        </button>
+
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#development">Development</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- ---------------------------------------------------------------------- -->
+    <main>
+        
+        <!-- Home Section (for intro) -->
+        <section id="home" class="general-section visible">
+            <div>
+                <h1 class="highlight">Welcome to Laplace Technology</h1>
+
+                <p>
+                    We are Laplace Laboratory, dedicated to mastering <span class="emphasis">Backend Development</span>.
+                    Our goal is to build robust and scalable systems that can power applications with efficiency and reliability.
+                    We achieve this through creativity and diligence, moving forward together through collaboration.
+                    <span class="emphasis">Our efforts and results will ultimately reshape the world.</span>
+                </p>
+                
+                
+            </div>
+        </section>
+        
+
+       <!-- About Section -->
+        <section id="about" class="general-section visible">
+            <h2 class="highlight">About Us</h2>
+                <p>
+                    We are Laplace Laboratory, passionate about mastering <span class="emphasis">Back-end technologies</span> to become experts in creating scalable, secure, and efficient systems. 
+                    Our focus lies in building reliable infrastructure, ensuring seamless data handling, and optimizing server-side performance.
+                    Through dedication and collaboration, we drive innovation and seek to deliver practical solutions that make a real impact.
+                    Our journey is not just about coding—it's about transforming ideas into reality and reshaping the future of digital technology.
+                </p>
+        </section>
+
+
+
+        <!-- Development Section -->
+        <section id="development" class="general-section visible">
+            <h2 class="highlight">Development</h2>
+            <p>
+                Our primary focus is on <span class="emphasis">back-end development</span>, where we design and implement robust APIs, manage databases, and ensure secure authentication protocols.
+                We excel in server-side logic, integrating systems, and improving performance to handle complex workflows.
+                From creating microservices to optimizing cloud architectures, we are committed to delivering backend solutions that are as efficient as they are innovative.
+            </p>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="general-section visible">
+            <h2 class="highlight">Our Timeline</h2>
+            <p>
+                Discover our journey from concept to execution. Over the years, we've tackled a range of projects—from small-scale applications to large enterprise systems.
+                Each step along the way has been an opportunity to refine our skills, learn new technologies, and expand our understanding of backend architecture.
+                Our timeline is a testament to our growth, innovation, and commitment to excellence.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="general-section visible">
+            <h2 class="highlight">Contact Us</h2>
+            <p>
+                Feel free to reach out to us with any inquiries or collaboration opportunities. Whether you're looking for backend development support or insights into the latest in server-side technologies,
+                we're here to help you build the future of your digital infrastructure.
+            </p>
+        </section>
+        
+    </main>
+    
+    <!-- ---------------------------------------------------------------------- -->
+    <footer class="footer">
+        <ul class="social-links">
+            <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

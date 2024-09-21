@@ -1,0 +1,161 @@
+/* 내비게이션 바 스타일 설정 */
+.navbar {
+    position: fixed; /* 페이지 스크롤 시에도 메뉴바를 고정 */
+    display: flex;
+    align-items: center; /* 내비게이션 바의 자식 요소를 수직 중앙에 배치 */
+    justify-content: space-between; /* 좌측과 우측에 요소를 배치 */
+    background-color: rgba(51, 51, 51, 0.7); /* 내비게이션 바의 배경 색상 (투명도 조정 가능) */
+    width: 100%;
+    padding: 20px 25px; /* 좌우 패딩 설정 */
+    top: 0;
+    height: 150px; /* 내비게이션 바의 고정 높이 설정 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+    transition: background-color 1.5s, transform 1.5s; /* 배경색과 위치 변경 애니메이션 */
+    z-index: 1000; /* 배경 이미지보다 위에 위치하도록 설정 */
+}
+
+/*********************************************************************/
+/* 로고 및 서브 로고 묶음 스타일 */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%; /* 전체 내비게이션 바의 높이에 맞추기 */
+    gap: 10px; /* 두 이미지 사이의 간격 조정 */
+}
+
+/* 로고 링크 스타일 */
+.logo-link {
+    padding: 0 15px;
+    text-decoration: none;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* 로고 이미지 스타일 */
+.logo-link img {
+    height: 90px; /* 로고 이미지 높이 설정 */
+    width: auto; /* 너비 자동 조정 */
+    object-fit: cover; /* 이미지가 컨테이너에 맞게 비율 유지하며 조정 */
+    transition: transform 0.3s ease;
+}
+
+.logo-link img:hover {
+    transform: scale(1.05);
+}
+
+
+/* 서브 로고 링크 스타일 */
+.sub-logo {
+    display: flex;
+    align-items: center;
+    height: 100%; /* 서브 로고를 래퍼 높이에 맞추기 */
+    padding: 0; /* 패딩 제거하여 이미지가 정확하게 맞도록 설정 */
+}
+
+/* 서브 로고 이미지 스타일 */
+.sub-logo img {
+    border-radius: 100px; /* 이미지 테두리 둥글게 설정 */
+    height: 100px; /* 서브 로고 이미지 높이 설정 */
+    width: auto; /* 너비 자동 조정 */
+    object-fit: cover; /* 이미지가 컨테이너에 맞게 비율 유지하며 조정 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 확대와 그림자 애니메이션 설정 */
+}
+
+/* 서브 로고 이미지 호버 효과 */
+.sub-logo img:hover {
+    transform: scale(1.05); /* 서브 로고 이미지 호버 시 확대 */
+    box-shadow: 0 0 12px 4px gold, 0 0 24px 8px gold; /* 황금색 그림자 추가 */
+}
+
+/*********************************************************************/
+
+
+/* 로고 텍스트 스타일 설정 */
+.logo-text {
+    font-family: "Parisienne", cursive;
+    color: #fff;
+    font-size: 32px; /* 폰트 크기 설정 */
+    margin: 0; /* 기본 여백 제거 */
+    line-height: 1.2; /* 텍스트 라인 높이 설정 */
+    text-align: left; /* 텍스트 정렬 설정 */
+    padding-left: 20px; /* 로고와 텍스트 사이의 거리 설정 */
+}
+
+/*********************************************************************/
+
+/* 내비게이션 메뉴 스타일 설정 */
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;    
+    display: flex;
+    gap: 15px; /* 메뉴 항목 사이의 간격 설정 */
+    flex-grow: 1; /* 남는 공간을 채우도록 설정 */
+}
+
+/* 내비게이션 메뉴 항목 스타일 설정 */
+.nav-menu li {
+    position: relative; /* 가상 요소를 사용하기 위해 상대 위치 설정 */
+    flex-grow: 1; /* 메뉴 항목이 부모 요소의 가로 공간을 균등하게 채우도록 설정 */
+    text-align: center; /* 텍스트를 중앙 정렬 */
+    margin: 0;
+    padding: 0 20px; /* 좌우 패딩 조정 */
+    border: 3px solid transparent; /* 기본 상태에서 테두리를 투명으로 설정 */
+    border-radius: 5px; /* 테두리 둥글게 설정 */
+    overflow: hidden; /* 가상 요소가 부모 요소를 넘지 않도록 설정 */
+    transition: box-shadow 0.3s ease; /* 박스 그림자 애니메이션 */
+}
+
+/* 내비게이션 메뉴 항목 호버 효과 설정 */
+.nav-menu li:hover {
+    animation: highlightSparkle 1s ease infinite; /* 금가루 애니메이션 적용 */
+    box-shadow: 0 0 12px 4px gold, 0 0 24px 8px; /* 황금색 그림자 추가 */
+}
+
+/* 내비게이션 메뉴 항목 호버 효과 설정 */
+.nav-menu li:hover::before {
+    opacity: 1; /* 호버 시 그라데이션이 나타나도록 설정 */
+    animation: navHighlightSparkle 1s ease infinite; /* 금가루 애니메이션 적용 */
+}
+
+/* 내비게이션 링크 스타일 설정 */
+.nav-menu a {
+    font-family: "Playpen Sans";
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 20px 0; /* 상하 패딩 설정 */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* 내비게이션 링크 호버 효과 설정 */
+.nav-menu a:hover {
+    transform: scale(1.15);
+}
+
+
+/* 내비게이션 전용 하이라이트 애니메이션 정의 */
+@keyframes navHighlightSparkle {
+    0% { box-shadow: 0 0 12px 4px gold, 0 0 24px 8px gold; }
+    50% { box-shadow: 0 0 20px 6px gold, 0 0 40px 12px gold; }
+    100% { box-shadow: 0 0 12px 4px gold, 0 0 24px 8px gold; }
+}
+
+/* *************************************************************** */
+
+
+/* 햄버거 메뉴 버튼 스타일 */
+.menu-toggle {
+
+    display: none; /* 기본적으로 숨김 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

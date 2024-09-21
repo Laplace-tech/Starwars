@@ -1,0 +1,136 @@
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* 위에서 아래로 슬라이드 */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* 정상 위치로 이동 */
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0); /* 정상 위치 */
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px); /* 위로 슬라이드하며 사라짐 */
+    }
+}
+/* ******************************************************************* */
+
+/* 반응형 디자인 설정 */
+@media (max-width: 800px) {
+  
+    /* 내비게이션 바 스타일 조정 */
+    .navbar {
+        padding: 0;
+        height: 140px; /* 내비게이션 바 높이 축소 */
+        flex-direction: column; /* 세로 배치로 변경 */
+        align-items: center;
+        justify-content: center; /* 중앙 정렬 */
+    }
+
+    /* ******************************************************************* */
+
+    /* 로고 링크 크기 및 패딩 조정 */
+    .logo-link {
+        height: 80%;
+        padding: 10px 20px; /* 패딩 제거 */
+        align-items: center;
+        justify-content: center; /* 중앙 정렬 */
+    }
+
+    /* 로고 이미지 크기 조정 */
+    .logo-link img {
+        border-radius: 5px;
+        object-fit: cover; /* 컨테이너에 맞춰 비율 유지 */
+        width: 100%; /* 너비를 100%로 설정 */
+    }
+
+    .logo-link img:hover {
+        transform: scale(1.1); /* 버튼 크기 확대 */
+    }
+    
+    
+
+    /* 로고 텍스트 크기 조정 */
+    .logo-text {
+        font-size: 28px; /* 작은 화면에 맞춰 글자 크기 축소 */
+        padding: 0; /* 여백 제거 */
+    }
+
+
+    .sub-logo {
+        display: none; /* 서브 로고 숨기기 */
+    }
+
+    /* ******************************************************************* */
+
+    .menu-toggle {
+        display: block; /* 햄버거 메뉴 버튼 표시 */
+        cursor: pointer; /* 포인터로 마우스 커서 변경 */
+    }
+    
+    .menu-toggle img {
+        border-radius: 100px;
+        width: 50px; /* 햄버거 버튼 이미지 너비 */
+        height: 50px; /* 햄버거 버튼 이미지 높이 */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* 크기 변화 및 그림자 애니메이션 */
+    }
+    
+    /* 햄버거 메뉴 버튼 호버 효과 */
+    .menu-toggle:hover img {
+        transform: scale(1.1); /* 버튼 크기 확대 */
+        box-shadow: 0 0 10px rgba(253, 254, 254, 0.9); /* 황금빛 그림자 */
+    }
+
+    /* ******************************************************************* */
+
+    /* 내비게이션 메뉴 스타일 조정 */
+    .nav-menu {
+        flex-direction: column; /* 세로로 메뉴 배치 */
+        background-color: rgba(51, 51, 51, 0); /* 기본 상태에서 배경색 투명 */
+        position: absolute;
+        top: 100%; /* 메뉴가 내비게이션 바 아래에 위치 */
+        left: 0;
+        width: 100%; /* 너비 100% */
+        overflow: hidden; /* 숨겨진 메뉴 */
+        max-height: 0; /* 최대 높이 0 */
+        opacity: 0; /* 기본 상태에서 메뉴 투명 */
+        transition: background-color 0.3s ease, max-height 0.3s ease, opacity 0.3s ease; /* 트랜지션 적용 */
+    }
+
+    /* 메뉴 활성화 상태 */
+    .nav-menu.active {
+        background-color: rgba(51, 51, 51, 0.7); /* 활성화 시 배경색 추가 */
+        padding: 0px;
+        max-height: 500px; /* 최대 높이 증가 */
+        opacity: 1; /* 메뉴가 보이도록 설정 */
+    }
+
+    /* 메뉴 항목 스타일 조정 */
+    .nav-menu li {
+        width: 100%; /* 항목 너비를 100%로 설정 */
+        padding: 0;
+        margin: 5px 0; /* 메뉴 간격 조정 */
+        opacity: 0; /* 기본 상태에서 항목 숨김 */
+        transform: translateY(-20px); /* 위로 이동된 상태 */
+        animation: slideIn 0.3s ease-out forwards; /* 슬라이드 애니메이션 적용 */
+    }
+
+    /* 각 항목별로 애니메이션 지연 설정 */
+    .nav-menu li:nth-child(1) { animation-delay: 0.2s; }
+    .nav-menu li:nth-child(2) { animation-delay: 0.4s; }
+    .nav-menu li:nth-child(3) { animation-delay: 0.6s; }
+    .nav-menu li:nth-child(4) { animation-delay: 0.8s; }
+    .nav-menu li:nth-child(5) { animation-delay: 1s; }
+
+    /* 활성화되지 않은 메뉴 항목 애니메이션 */
+    .nav-menu:not(.active) li {
+        animation: slideOut 0.1s ease-in forwards; /* 슬라이드 아웃 애니메이션 적용 */
+    }
+}
